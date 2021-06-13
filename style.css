@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+}
 body {
     background-color: var(--bgc)
 }
@@ -104,7 +107,7 @@ div.keypad {
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    touch-action: manipulation;
+    
 }
 div.keypad button.calc-btn {
     width: 60px;
