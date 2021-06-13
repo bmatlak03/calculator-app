@@ -18,7 +18,10 @@ const calcBtnClick = (command) => {
     selectNum2 = false;
     result.textContent = "";
   } else if (command === "del") {
-    result.textContent = result.textContent.slice(0, -1);
+    if (number1 || number2) {
+      if (!selectNum2) number1 = number1.slice(0, -1);
+      result.textContent = result.textContent.slice(0, -1);
+    }
   } else if (command === "+") {
     if (!isOperationSelected) operation = "+";
     result.textContent = "";
