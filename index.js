@@ -19,7 +19,7 @@ const calcBtnClick = (command) => {
     result.textContent = "";
   } else if (command === "del") {
     if (number1 || number2) {
-      if (!selectNum2) number1 = number1.slice(0, -1);
+      if (!selectNum2) number1 = number1.toString().slice(0, -1);
       result.textContent = result.textContent.slice(0, -1);
     }
   } else if (command === "+") {
@@ -40,6 +40,7 @@ const calcBtnClick = (command) => {
     selectNum2 = true;
   } else if (command === "=") {
     calculate();
+    selectNum2 = false;
   } else {
     result.textContent += command;
     if (!selectNum2) number1 = result.textContent;
